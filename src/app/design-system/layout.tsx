@@ -31,7 +31,7 @@ export default function DesignSystemLayout({
 
   return (
     <SidebarProvider>
-      <div className="flex h-screen overflow-hidden w-full bg-background">
+      <div className="bg-background flex h-screen w-full overflow-hidden">
         <Sidebar className="border-r">
           <SidebarContent>
             <SidebarGroup>
@@ -40,7 +40,10 @@ export default function DesignSystemLayout({
                 <SidebarMenu>
                   {navItems.map((item) => (
                     <SidebarMenuItem key={item.title}>
-                      <SidebarMenuButton render={<Link href={item.url} />} isActive={pathname.startsWith(item.url)}>
+                      <SidebarMenuButton
+                        render={<Link href={item.url} />}
+                        isActive={pathname.startsWith(item.url)}
+                      >
                         <item.icon className="mr-2 h-4 w-4" />
                         <span>{item.title}</span>
                       </SidebarMenuButton>
@@ -51,9 +54,9 @@ export default function DesignSystemLayout({
             </SidebarGroup>
           </SidebarContent>
         </Sidebar>
-        
+
         <main className="flex-1 overflow-y-auto">
-          <div className="p-8 max-w-6xl mx-auto">
+          <div className="mx-auto max-w-6xl p-8">
             <div className="mb-4">
               <SidebarTrigger />
             </div>

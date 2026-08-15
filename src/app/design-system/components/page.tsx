@@ -1,11 +1,37 @@
-import React from 'react';
-import { Button } from '@/shared/components/ui/button';
-import { Input } from '@/shared/components/ui/input';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/shared/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/shared/components/ui/avatar';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/shared/components/ui/dialog';
-import { Skeleton } from '@/shared/components/ui/skeleton';
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/shared/components/ui/table';
+import React from "react";
+import { Button } from "@/shared/components/ui/button";
+import { Input } from "@/shared/components/ui/input";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/shared/components/ui/card";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/shared/components/ui/avatar";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/shared/components/ui/dialog";
+import { Skeleton } from "@/shared/components/ui/skeleton";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/shared/components/ui/table";
 
 export default function ComponentsPage() {
   return (
@@ -21,7 +47,7 @@ export default function ComponentsPage() {
         {/* Buttons */}
         <section className="space-y-6 border-b pb-12">
           <h2 className="text-2xl font-semibold">Buttons</h2>
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap items-center gap-4">
             <Button variant="default">Default</Button>
             <Button variant="secondary">Secondary</Button>
             <Button variant="destructive">Destructive</Button>
@@ -34,7 +60,7 @@ export default function ComponentsPage() {
         {/* Inputs */}
         <section className="space-y-6 border-b pb-12">
           <h2 className="text-2xl font-semibold">Inputs</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div className="space-y-2">
               <label className="text-sm font-medium">Default Input</label>
               <Input placeholder="Type something..." />
@@ -49,7 +75,7 @@ export default function ComponentsPage() {
         {/* Cards */}
         <section className="space-y-6 border-b pb-12">
           <h2 className="text-2xl font-semibold">Cards</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <Card>
               <CardHeader>
                 <CardTitle>Card Title</CardTitle>
@@ -68,7 +94,7 @@ export default function ComponentsPage() {
         {/* Avatars */}
         <section className="space-y-6 border-b pb-12">
           <h2 className="text-2xl font-semibold">Avatars</h2>
-          <div className="flex flex-wrap gap-4 items-center">
+          <div className="flex flex-wrap items-center gap-4">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
@@ -82,7 +108,7 @@ export default function ComponentsPage() {
         {/* Dialog & Skeleton */}
         <section className="space-y-6 border-b pb-12">
           <h2 className="text-2xl font-semibold">Misc (Dialog & Skeleton)</h2>
-          <div className="flex gap-8 items-start">
+          <div className="flex items-start gap-8">
             <Dialog>
               <DialogTrigger render={<Button variant="outline" />}>
                 Open Dialog
@@ -91,14 +117,14 @@ export default function ComponentsPage() {
                 <DialogHeader>
                   <DialogTitle>Are you absolutely sure?</DialogTitle>
                   <DialogDescription>
-                    This action cannot be undone. This will permanently delete your account
-                    and remove your data from our servers.
+                    This action cannot be undone. This will permanently delete
+                    your account and remove your data from our servers.
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>
             </Dialog>
 
-            <div className="flex items-center space-x-4 border rounded-lg p-4 bg-card">
+            <div className="bg-card flex items-center space-x-4 rounded-lg border p-4">
               <Skeleton className="h-12 w-12 rounded-full" />
               <div className="space-y-2">
                 <Skeleton className="h-4 w-[200px]" />
@@ -111,7 +137,7 @@ export default function ComponentsPage() {
         {/* Table */}
         <section className="space-y-6">
           <h2 className="text-2xl font-semibold">Tables</h2>
-          <div className="border rounded-lg bg-card">
+          <div className="bg-card rounded-lg border">
             <Table>
               <TableCaption>A list of your recent invoices.</TableCaption>
               <TableHeader>

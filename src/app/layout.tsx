@@ -20,15 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} dark h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col font-sans leading-[1.4] tracking-normal">
+    <html lang="en" className={`${inter.variable} dark h-full antialiased`}>
+      <body className="flex min-h-full flex-col font-sans leading-[1.4] tracking-normal">
         <ReactQueryProvider>
-          <TooltipProvider>
-            {children}
-          </TooltipProvider>
+          <TooltipProvider>{children}</TooltipProvider>
         </ReactQueryProvider>
       </body>
     </html>
