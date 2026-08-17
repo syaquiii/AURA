@@ -1,5 +1,7 @@
+import DashboardContainer from "@/features/dashboard/container/dashboard-container";
+
 const page = () => {
-  return <div>ini dashboard</div>;
+  return <DashboardContainer />;
 };
 
 export default page;
