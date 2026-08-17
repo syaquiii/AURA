@@ -25,6 +25,7 @@
   --text-body-1: 1rem;
   --text-body-2: 0.875rem;
   --text-body-3: 0.75rem;
+  --text-body-4: 0.5rem;
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -62,6 +63,24 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Design System Colors */
+  --color-primary-1: #00ceea;
+
+  --color-secondary-1: #101935;
+  --color-secondary-2: #8b5cf6;
+  --color-secondary-3: #57c3ff;
+  --color-secondary-4: #0a91fb;
+  --color-secondary-5: #fdb52a;
+
+  --color-neutral-900: #000f25;
+  --color-neutral-800: #121c3d;
+  --color-neutral-700: #27346d;
+  --color-neutral-600: #7c86ac;
+  --color-neutral-400: #aebde1;
+  --color-neutral-300: #d1dbfd;
+  --color-neutral-200: #d9e1fa;
+  --color-neutral-100: #ffffff;
 }
 
 :root {
@@ -114,7 +133,8 @@
   --muted-foreground: #7c86ac;
   --accent: #57c3ff;
   --accent-foreground: #000f25;
-  --destructive: #8b5cf6; /* Mapped to purple for distinction, or could be default red */
+  --destructive: #8b5cf6;
+  /* Mapped to purple for distinction, or could be default red */
   --border: #27346d;
   --input: #27346d;
   --ring: #00ceea;
@@ -137,9 +157,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

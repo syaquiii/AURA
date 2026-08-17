@@ -66,6 +66,6 @@ const DesignContainer = ({ children }: DesignContainerProps) => {
       </div>
     </SidebarProvider>
   );
-}
+};
 
 export default DesignContainer;

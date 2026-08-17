@@ -10,8 +10,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Aura Design System",
-  description: "Aura Next.js application with Shadcn UI",
+  title: "AURA - AI Retail Assistant",
+  description:
+    "Intelligent AI-powered retail assistant for optimizing inventory and business decisions.",
+  icons: {
+    icon: "/assets/icon.png",
+  },
 };
 
 export default function RootLayout({
